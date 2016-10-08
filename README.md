@@ -9,8 +9,8 @@ Prior to running any examples, you must fill out the following configurations wi
 
 ### Java DSL Example
 To run the `TwitterSource.java` class on a Unix machine, use the following command from the top level directory:
-`mvn -e compile exec:java -Dexec.mainClass=TwitterRoute`
+- `mvn -e compile exec:java -Dexec.mainClass=TwitterRoute`
 
 ### Spring DSL Example
 To run the `spring.xml` example on a Unix machine, run the following command from the top level directory:
-`mvn camel:run`
+- `mvn camel:run`
