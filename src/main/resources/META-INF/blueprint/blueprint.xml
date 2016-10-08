@@ -33,54 +33,52 @@
                 </groovy>
             </setHeader>
 
-            <when>
-                <simple>
-                    ${in.body.geoLocation} != null
-                </simple>
-                <setBody>
+            <choice>
+                <when>
                     <simple>
-                        {
-                            "geometry":
-                            {
-                                "type": "Point",
-                                    "coordinates":
-                                    [
-                                        ${in.body?.geoLocation?.longitude},
-                                        ${in.body?.geoLocation?.latitude}
-                                    ]
-                            },
-                            "type":"Feature",
-                            "properties":
-                            {
-                                "title":"${in.body.text}",
-                                "effective":"${header.effectiveDate}",
-                                "resource-download-url":"https://twitter.com/${in.body.user.id}/status/${in.body.id}"
-                            }
-                        }
+                        ${in.body.geoLocation} != null
                     </simple>
-                </setBody>
-                <to uri="direct://catalogIngest"/>
-            </when>
+                    <setBody>
+                        <simple>
+                            {
+                                "geometry":
+                                {
+                                    "type": "Point",
+                                        "coordinates":
+                                        [
+                                            ${in.body?.geoLocation?.longitude},
+                                            ${in.body?.geoLocation?.latitude}
+                                        ]
+                                },
+                                "type":"Feature",
+                                "properties":
+                                {
+                                    "title":"${in.body.text}",
+                                    "effective":"${header.effectiveDate}",
+                                    "resource-download-url":"https://twitter.com/${in.body.user.id}/status/${in.body.id}"
+                                }
+                            }
+                        </simple>
+                    </setBody>
+                </when>
 
-            <when>
-                <simple>
-                    ${in.body.geoLocation} == null
-                </simple>
-                <setBody>
-                    <simple>
-                        {
-                            "type":"Feature",
-                            "properties":
+                <otherwise>
+                    <setBody>
+                        <simple>
                             {
-                                "title":"${in.body.text}",
-                                "effective":"${header.effectiveDate}",
-                                "resource-download-url":"https://twitter.com/${in.body.user.id}/status/${in.body.id}"
+                                "type":"Feature",
+                                "properties":
+                                {
+                                    "title":"${in.body.text}",
+                                    "effective":"${header.effectiveDate}",
+                                    "resource-download-url":"https://twitter.com/${in.body.user.id}/status/${in.body.id}"
+                                }
                             }
-                        }
-                    </simple>
-                </setBody>
-                <to uri="direct://catalogIngest"/>
-            </when>
+                        </simple>
+                    </setBody>
+                </otherwise>
+            </choice>
+            <to uri="direct://catalogIngest"/>
         </route>
     </camelContext>
 </blueprint>
