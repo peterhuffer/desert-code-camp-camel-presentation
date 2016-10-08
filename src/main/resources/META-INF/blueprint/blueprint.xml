@@ -55,6 +55,8 @@
                                 {
                                     "title":"${in.body.text}",
                                     "effective":"${header.effectiveDate}",
+                                    "modified":"${header.effectiveDate}",
+                                    "created":"${header.effectiveDate}",
                                     "resource-download-url":"https://twitter.com/${in.body.user.id}/status/${in.body.id}"
                                 }
                             }
@@ -71,6 +73,8 @@
                                 {
                                     "title":"${in.body.text}",
                                     "effective":"${header.effectiveDate}",
+                                    "modified":"${header.effectiveDate}",
+                                    "created":"${header.effectiveDate}",
                                     "resource-download-url":"https://twitter.com/${in.body.user.id}/status/${in.body.id}"
                                 }
                             }
