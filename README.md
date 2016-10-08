@@ -1,6 +1,6 @@
 # Apache Camel Presentation
 
-This is a presentation on an introductory look at Apache Camel.
+This is a presentation for an introductory look at Apache Camel.
 
 ## Running examples
 Prior to running any examples, you must fill out the `src/main/resources/twitterapi.properties` and `src/main/resources/gmail.properties` configurations with the appropriate information.
