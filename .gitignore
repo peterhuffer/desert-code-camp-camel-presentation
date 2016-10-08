@@ -1,3 +1,7 @@
 target/
+*.idea
+*.DS_Store
+*.iml
+
 src/main/resources/twitterapi.properties
 src/main/resources/gmail.properties
