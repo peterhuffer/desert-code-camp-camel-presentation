@@ -1,4 +1,4 @@
-# desert-code-camp-camel-presentation
+# Apache Camel Presentation
 
 This is a presentation on an introductory look at Apache Camel.
 
