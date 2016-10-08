@@ -23,7 +23,7 @@ public class TwitterRoute {
     private static final String FROM_EMAIL_PASSWORD = "fromEmailPassword";
     private static final String TO_EMAIL = "toEmail";
 
-    private static final String SEARCH_KEYWORDS = "connexta";
+    private static final String SEARCH_KEYWORDS = "desertCamel";
     private static final long POLLING_RATE_MILLIS = TimeUnit.SECONDS.toMillis(30);
 
     private static String consumerKey;

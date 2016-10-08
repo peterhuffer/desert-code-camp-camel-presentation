@@ -16,7 +16,7 @@
     <routeContext id="camelContext" xmlns="http://camel.apache.org/schema/spring">
         <!-- we can have a route -->
         <route id="twitterRoute">
-            <from uri="twitter://search?type=polling&amp;delay=30000&amp;keywords=connexta&amp;consumerKey=[[consumerKey]]&amp;consumerSecret=[[consumerSecret]]&amp;accessToken=[[accessToken]]&amp;accessTokenSecret=[[accessTokenSecret]]"/>
+            <from uri="twitter://search?type=polling&amp;delay=30000&amp;keywords=desertCamel&amp;consumerKey=[[consumerKey]]&amp;consumerSecret=[[consumerSecret]]&amp;accessToken=[[accessToken]]&amp;accessTokenSecret=[[accessTokenSecret]]"/>
             <setHeader headerName="subject">
                 <simple>${in.body.user.name}</simple>
             </setHeader>

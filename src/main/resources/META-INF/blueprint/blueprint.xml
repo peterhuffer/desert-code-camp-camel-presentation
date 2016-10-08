@@ -21,7 +21,7 @@
 
         <!-- Twitter Route -->
         <route id="twitterRoute">
-            <from uri="twitter://search?type=direct&amp;keywords=connexta&amp;consumerKey=[[consumerKey]]&amp;consumerSecret=[[consumerSecret]]&amp;accessToken=[[accessToken]]&amp;accessTokenSecret=[[accessTokenSecret]]"/>
+            <from uri="twitter://search?type=direct&amp;keywords=desertCamel&amp;consumerKey=[[consumerKey]]&amp;consumerSecret=[[consumerSecret]]&amp;accessToken=[[accessToken]]&amp;accessTokenSecret=[[accessTokenSecret]]"/>
 
             <setHeader headerName="subject">
                 <simple>${in.body.user.name}</simple>
