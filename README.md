@@ -3,7 +3,9 @@
 This is a presentation for an introductory look at Apache Camel.
 
 ## Running examples
-Prior to running any examples, you must fill out the `src/main/resources/twitterapi.properties` and `src/main/resources/gmail.properties` configurations with the appropriate information.
+Prior to running any examples, you must fill out the following configurations with the appropriate information:
+- `src/main/resources/twitterapi.properties`
+- `src/main/resources/gmail.properties`
 
 ### Java DSL Example
 To run the `TwitterSource.java` class on a Unix machine, use the following command from the top level directory:
