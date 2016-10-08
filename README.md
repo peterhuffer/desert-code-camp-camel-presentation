@@ -8,7 +8,7 @@ Prior to running any examples, you must fill out the following configurations wi
 - `src/main/resources/gmail.properties`
 
 ### Java DSL Example
-To run the `TwitterSource.java` class on a Unix machine, use the following command from the top level directory:
+To run the `TwitterRoute.java` class on a Unix machine, use the following command from the top level directory:
 - `mvn -e compile exec:java -Dexec.mainClass=TwitterRoute`
 
 ### Spring DSL Example
